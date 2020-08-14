@@ -6,19 +6,20 @@ namespace GameInventory.GameItem
 {
     class Item
     {
-        public Items Name { get; set; }
-        public int maxStackableSize { get; set; }
+        public Items Type { get; set; }
+        public int MaxStackableSize { get; set; }
+        
 
-        public Item(Items name, int maxStackableSize)
+        public Item(Items type, int maxStackableSize)
         {
-            Name = name;
-            this.maxStackableSize = maxStackableSize;
+            Type = type;
+            MaxStackableSize = maxStackableSize;
         }
 
         public Item(Item item)
         {
-            Name = item.Name;
-            maxStackableSize = item.maxStackableSize;
+            Type = item.Type;
+            MaxStackableSize = item.MaxStackableSize;
         }
     }
 }

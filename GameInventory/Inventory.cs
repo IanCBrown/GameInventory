@@ -6,17 +6,17 @@ namespace GameInventory
 {
     class Inventory
     {
-        private List<Item> Items { get; set; }
-        public int maxSize { get; set; }
-        public int currSize { get; set; }
+        private List<ItemStack> Items { get; set; }
+        public int MaxSize { get; set; }
+        public int CurrSize { get; set; }
 
-        public Inventory(List<Item> items, int maxSize)
+        public Inventory(List<ItemStack> items, int maxSize)
         {
             if (items.Count <= maxSize)
             {
-                this.Items = items;
-                this.maxSize = maxSize;
-                this.currSize = items.Count;
+                Items = items;
+                MaxSize = maxSize;
+                CurrSize = items.Count;
             }
             else
             {
@@ -27,12 +27,12 @@ namespace GameInventory
         public Inventory(Inventory inv)
         {
             Items = inv.Items;
-            maxSize = inv.maxSize;
-            currSize = inv.currSize;
+            MaxSize = inv.MaxSize;
+            CurrSize = inv.CurrSize;
         }
 
 
-        public Item GetItemAt(int index)
+        public ItemStack GetItemAt(int index)
         {
             return Items[index];
         }
@@ -42,7 +42,7 @@ namespace GameInventory
             return Items.Remove(GetItemAt(index)).Equals(true);
         }
 
-        public bool insertAt(Item item, int index)
+        public bool InsertAt(ItemStack items, int index)
         {
             return false;
         }
