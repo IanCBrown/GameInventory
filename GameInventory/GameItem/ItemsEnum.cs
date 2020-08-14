@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameInventory.Item
+namespace GameInventory.GameItem
 {
     public enum Items
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using GameInventory.GameItem;
 
 namespace GameInventory
 {
