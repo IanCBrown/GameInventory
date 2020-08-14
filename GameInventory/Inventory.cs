@@ -42,9 +42,12 @@ namespace GameInventory
             return Items.Remove(GetItemAt(index)).Equals(true);
         }
 
-        public bool InsertAt(ItemStack items, int index)
+        public void InsertAt(int index, ItemStack items)
         {
-            return false;
+            if (index < MaxSize && index >= 0)
+            {
+                Items.Insert(index, items);
+            }
         }
     }
 }
