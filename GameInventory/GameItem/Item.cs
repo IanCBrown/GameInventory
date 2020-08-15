@@ -15,10 +15,15 @@ namespace GameInventory.GameItem
             Quantity++;
         }
 
+        public Item(int quantity)
+        {
+            Quantity = quantity;
+        }
+
         public Item(ItemType type)
         {
             Type = type;
-            Quantity = 1;
+            Quantity++;
         }
 
         public Item(ItemType type, int quantity, int maxStackableSize)
@@ -40,6 +45,43 @@ namespace GameInventory.GameItem
             Type = item.Type;
             Quantity = item.Quantity;
             MaxStackableSize = item.MaxStackableSize;
+        }
+
+        public void Increment()
+        {
+            if (Quantity < MaxStackableSize)
+            {
+                Quantity++;
+            }
+        }
+
+        public void IncrementBy(int num)
+        {
+            if (Quantity + num <= MaxStackableSize)
+            {
+                Quantity += num;
+            }
+        }
+
+        public void Decrement()
+        {
+            if (Quantity > 0)
+            {
+                Quantity--;
+            }
+        }
+
+        public void DecrementBy(int num)
+        {
+            if (Quantity - num >= 0)
+            {
+                Quantity -= num;
+            }
+        }
+
+        public override string ToString()
+        {
+            return Type + ":" + Quantity;
         }
     }
 }

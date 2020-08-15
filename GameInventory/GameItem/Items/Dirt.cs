@@ -10,5 +10,13 @@ namespace GameInventory.GameItem.Items
         {
 
         }
+
+        public Dirt(int quantity)
+        {
+            if (quantity <= MaxStackableSize)
+            {
+                Quantity = quantity;
+            }
+        }
     }
 }

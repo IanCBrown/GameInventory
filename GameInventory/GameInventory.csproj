@@ -4,9 +4,4 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="ConsoleUI\" />
-    <Folder Include="GameItem\Items\" />
-  </ItemGroup>
 </Project>

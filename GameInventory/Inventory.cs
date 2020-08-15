@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using GameInventory.GameItem;
 
 namespace GameInventory
@@ -7,14 +8,14 @@ namespace GameInventory
     class Inventory
     {
         //private List<ItemStack> Items { get; set; }
-        private List<Item> Items { get; set; }
+        private List<Item> Items { get; set; } = new List<Item>();
         // Default MaxSize = 10 (i.e. numberkey itemslots)
         public int MaxSize { get; set; } = 10;
         public int CurrSize { get; set; } = 0;
 
         public Inventory()
         {
-
+            
         }
 
         public Inventory(List<Item> items, int maxSize)
@@ -49,12 +50,35 @@ namespace GameInventory
             return Items.Remove(GetItemAt(index)).Equals(true);
         }
 
-        public void InsertAt(int index, Item items)
+        public void InsertAt(int index, Item item)
         {
-            if (index < MaxSize && index >= 0)
+            if (index < MaxSize && index >= 0 && Items.Count < MaxSize)
             {
-                Items.Insert(index, items);
+                Items.Insert(index, item);
             }
+        }
+
+        // always adds to tail. 
+        public void Add(Item item)
+        {
+            if (Items.Count < MaxSize)
+            {
+                Items.Add(item);
+            }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder inventorySB = new StringBuilder();
+            for (int i = 0; i < Items.Count; i++)
+            {
+                inventorySB.Append(Items[i].ToString());
+                if (i + 1 < Items.Count)
+                {
+                    inventorySB.Append("|");
+                }
+            }
+            return inventorySB.ToString();
         }
     }
 }

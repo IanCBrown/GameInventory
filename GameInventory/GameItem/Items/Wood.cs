@@ -4,9 +4,14 @@ namespace GameInventory.GameItem.Items
     public class Wood : Item
     {
         public new ItemType Type { get; set; } = ItemType.Wood;
-        public new int MaxStackableSize { get; set; } = 64;
+        public new int MaxStackableSize { get; set; } = (int) StackSize.FullStack;
 
-        public Wood()
+        public Wood() : base()
+        {
+
+        }
+
+        public Wood(int quantity) : base(quantity)
         {
 
         }

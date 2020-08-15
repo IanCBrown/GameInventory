@@ -6,7 +6,12 @@ namespace GameInventory.GameItem.Items
         public new ItemType Type { get; set; } = ItemType.Sand;
         public new int MaxStackableSize { get; set; } = (int) StackSize.FullStack;
 
-        public Sand()
+        public Sand() : base()
+        {
+
+        }
+
+        public Sand(int quantity) : base(quantity)
         {
 
         }

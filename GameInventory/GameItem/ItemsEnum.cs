@@ -12,7 +12,7 @@ namespace GameInventory.GameItem
         Wood,
         Pickaxe,
         Sword,
-        Axe,
+        Ax,
         Shovel,
         EnderPearl
     }

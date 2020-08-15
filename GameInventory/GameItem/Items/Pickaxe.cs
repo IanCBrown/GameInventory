@@ -6,7 +6,7 @@ namespace GameInventory.GameItem.Items
         public new ItemType Type { get; set; } = ItemType.Pickaxe;
         public new int MaxStackableSize { get; set; } = (int) StackSize.Unstackable;
 
-        public Pickaxe()
+        public Pickaxe() : base()
         {
 
         }
