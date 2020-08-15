@@ -4,21 +4,33 @@ using System.Text;
 
 namespace GameInventory.GameItem
 {
-    class Item
+    public class Item
     {
-        public Items Type { get; set; }
+        public ItemType Type { get; set; }
         public int MaxStackableSize { get; set; }
-        
+        public int Quantity { get; set; } = 0; 
 
-        public Item(Items type, int maxStackableSize)
+        public Item()
+        {
+            Quantity++;
+        }
+
+        public Item(ItemType type)
         {
             Type = type;
+        }
+
+        public Item(ItemType type, int quantity, int maxStackableSize)
+        {
+            Type = type;
+            Quantity = quantity;
             MaxStackableSize = maxStackableSize;
         }
 
         public Item(Item item)
         {
             Type = item.Type;
+            Quantity = item.Quantity;
             MaxStackableSize = item.MaxStackableSize;
         }
     }

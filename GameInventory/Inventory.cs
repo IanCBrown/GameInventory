@@ -7,8 +7,15 @@ namespace GameInventory
     class Inventory
     {
         private List<ItemStack> Items { get; set; }
-        public int MaxSize { get; set; }
-        public int CurrSize { get; set; }
+        //private List<Item> Items { get; set; }
+        // Default MaxSize = 10 (i.e. numberkey itemslots)
+        public int MaxSize { get; set; } = 10;
+        public int CurrSize { get; set; } = 0;
+
+        public Inventory()
+        {
+
+        }
 
         public Inventory(List<ItemStack> items, int maxSize)
         {

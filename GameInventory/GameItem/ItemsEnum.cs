@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GameInventory.GameItem
 {
-    public enum Items
+    public enum ItemType
     {
         Dirt,
         Sand,
@@ -13,6 +13,14 @@ namespace GameInventory.GameItem
         Pickaxe,
         Sword,
         Axe,
-        Shovel
+        Shovel,
+        EnderPearl
+    }
+
+    public enum StackSize:int
+    {
+        Unstackable = 1,
+        ShortStack = 16,
+        FullStack = 64
     }
 }

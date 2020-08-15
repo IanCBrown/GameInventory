@@ -1,5 +1,6 @@
 ﻿using System;
 using GameInventory.GameItem;
+using GameInventory.GameItem.Items;
 
 namespace GameInventory
 {
@@ -7,8 +8,12 @@ namespace GameInventory
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine(Items.Dirt);
+            Console.WriteLine("Welcome to GameInventory Prototype!");
+
+            Inventory inventory = new Inventory();
+            Dirt dirt = new Dirt();
+            Console.WriteLine(dirt.Type);
+            Console.WriteLine(dirt.MaxStackableSize);
         }
     }
 }
