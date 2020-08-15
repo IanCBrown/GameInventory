@@ -6,8 +6,8 @@ namespace GameInventory
 {
     class Inventory
     {
-        private List<ItemStack> Items { get; set; }
-        //private List<Item> Items { get; set; }
+        //private List<ItemStack> Items { get; set; }
+        private List<Item> Items { get; set; }
         // Default MaxSize = 10 (i.e. numberkey itemslots)
         public int MaxSize { get; set; } = 10;
         public int CurrSize { get; set; } = 0;
@@ -17,7 +17,7 @@ namespace GameInventory
 
         }
 
-        public Inventory(List<ItemStack> items, int maxSize)
+        public Inventory(List<Item> items, int maxSize)
         {
             if (items.Count <= maxSize)
             {
@@ -39,7 +39,7 @@ namespace GameInventory
         }
 
 
-        public ItemStack GetItemAt(int index)
+        public Item GetItemAt(int index)
         {
             return Items[index];
         }
@@ -49,7 +49,7 @@ namespace GameInventory
             return Items.Remove(GetItemAt(index)).Equals(true);
         }
 
-        public void InsertAt(int index, ItemStack items)
+        public void InsertAt(int index, Item items)
         {
             if (index < MaxSize && index >= 0)
             {

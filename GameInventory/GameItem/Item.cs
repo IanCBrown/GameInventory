@@ -18,13 +18,21 @@ namespace GameInventory.GameItem
         public Item(ItemType type)
         {
             Type = type;
+            Quantity = 1;
         }
 
         public Item(ItemType type, int quantity, int maxStackableSize)
         {
             Type = type;
-            Quantity = quantity;
-            MaxStackableSize = maxStackableSize;
+            if (quantity <= maxStackableSize)
+            {
+                Quantity = quantity;
+                MaxStackableSize = maxStackableSize;
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
         }
 
         public Item(Item item)

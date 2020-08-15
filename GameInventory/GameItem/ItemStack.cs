@@ -4,6 +4,7 @@ using System.Text;
 
 namespace GameInventory.GameItem
 {
+    // deprecated
     class ItemStack
     {
         public Stack<Item> Items { get; set; }
