@@ -28,7 +28,7 @@ namespace GameInventory.GameItem
 
         public void Add(Item item)
         {
-            if (item.Type == ItemType.Type && Size <= item.MaxStackableSize)
+            if (item.Id == ItemType.Id && Size <= item.MaxStackableSize)
             {
                 Items.Push(item);
             }

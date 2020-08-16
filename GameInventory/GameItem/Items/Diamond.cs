@@ -1,23 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace GameInventory.GameItem.Items
 {
-    public class Wood : Item
+    class Diamond : Item
     {
-        public Wood()
+        public Diamond()
         {
-            Id = ItemId.Wood;
+            Id = ItemId.Diamond;
             MaxStackableSize = (int)StackSize.FullStack;
-            DisplayName = "Wood";
+            DisplayName = "Diamond";
         }
 
-        public Wood(int quantity)
+        public Diamond(int quantity)
         {
             MaxStackableSize = (int)StackSize.FullStack;
             if (quantity <= MaxStackableSize)
             {
-                DisplayName = "Wood";
-                Id = ItemId.Wood;
+                Id = ItemId.Diamond;
+                DisplayName = "Diamond";
                 Quantity = quantity;
             }
             else
@@ -26,10 +28,10 @@ namespace GameInventory.GameItem.Items
             }
         }
 
-        public Wood(int quantity, int maxStackableSize) : base(quantity, maxStackableSize)
+        public Diamond(int quantity, int maxStackableSize) : base(quantity, maxStackableSize)
         {
-            Id = ItemId.Wood;
-            DisplayName = "Wood";
+            Id = ItemId.Diamond;
+            DisplayName = "Diamond";
         }
     }
 }

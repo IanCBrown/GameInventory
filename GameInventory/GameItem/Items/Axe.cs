@@ -4,13 +4,13 @@ using System.Text;
 
 namespace GameInventory.GameItem.Items
 {
-    class Shovel : Item
+    class Axe : Item
     {
-        public Shovel()
+        public Axe() 
         {
-            Id = ItemId.Shovel;
+            Id = ItemId.Axe;
             MaxStackableSize = (int)StackSize.Unstackable;
-            DisplayName = "Shovel";
+            DisplayName = "Axe";
         }
     }
 }

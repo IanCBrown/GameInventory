@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 9,
+    "MaxStackableSize": 1,
+    "Quantity": 1,
+    "DisplayName": "Air"
+  },
+  {
+    "Id": 6,
+    "MaxStackableSize": 1,
+    "Quantity": 1,
+    "DisplayName": "Axe"
+  },
+  {
+    "Id": 12,
+    "MaxStackableSize": 64,
+    "Quantity": 1,
+    "DisplayName": "Diamond"
+  },
+  {
+    "Id": 0,
+    "MaxStackableSize": 64,
+    "Quantity": 1,
+    "DisplayName": "Dirt"
+  },
+  {
+    "Id": 8,
+    "MaxStackableSize": 16,
+    "Quantity": 2,
+    "DisplayName": "Ender Pearl"
+  },
+  {
+    "Id": 3,
+    "MaxStackableSize": 64,
+    "Quantity": 1,
+    "DisplayName": "Flower"
+  },
+  {
+    "Id": 4,
+    "MaxStackableSize": 1,
+    "Quantity": 1,
+    "DisplayName": "Pickaxe"
+  },
+  {
+    "Id": 1,
+    "MaxStackableSize": 64,
+    "Quantity": 1,
+    "DisplayName": "Sand"
+  },
+  {
+    "Id": 7,
+    "MaxStackableSize": 1,
+    "Quantity": 1,
+    "DisplayName": "Shovel"
+  },
+  {
+    "Id": 5,
+    "MaxStackableSize": 1,
+    "Quantity": 1,
+    "DisplayName": "Sword"
+  },
+  {
+    "Id": 3,
+    "MaxStackableSize": 64,
+    "Quantity": 1,
+    "DisplayName": "Wood"
+  },
+  {
+    "Id": 10,
+    "MaxStackableSize": 64,
+    "Quantity": 1,
+    "DisplayName": "Wood Plank"
+  }
+]

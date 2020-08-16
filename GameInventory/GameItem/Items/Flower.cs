@@ -1,23 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace GameInventory.GameItem.Items
 {
-    public class Wood : Item
+    class Flower : Item
     {
-        public Wood()
+        public Flower()
         {
             Id = ItemId.Wood;
             MaxStackableSize = (int)StackSize.FullStack;
-            DisplayName = "Wood";
+            DisplayName = "Flower";
         }
 
-        public Wood(int quantity)
+        public Flower(int quantity)
         {
             MaxStackableSize = (int)StackSize.FullStack;
             if (quantity <= MaxStackableSize)
             {
-                DisplayName = "Wood";
-                Id = ItemId.Wood;
+                Id = ItemId.Flower;
+                DisplayName = "Flower";
                 Quantity = quantity;
             }
             else
@@ -26,10 +28,10 @@ namespace GameInventory.GameItem.Items
             }
         }
 
-        public Wood(int quantity, int maxStackableSize) : base(quantity, maxStackableSize)
+        public Flower(int quantity, int maxStackableSize) : base(quantity, maxStackableSize)
         {
-            Id = ItemId.Wood;
-            DisplayName = "Wood";
+            Id = ItemId.Flower;
+            DisplayName = "Flower";
         }
     }
 }

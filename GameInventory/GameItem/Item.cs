@@ -6,9 +6,10 @@ namespace GameInventory.GameItem
 {
     public class Item
     {
-        public ItemType Type { get; set; }
+        public ItemId Id { get; set; }
         public int MaxStackableSize { get; set; }
         public int Quantity { get; set; } = 0; 
+        public string DisplayName { get; set; }
 
         public Item()
         {
@@ -17,34 +18,36 @@ namespace GameInventory.GameItem
 
         public Item(int quantity)
         {
-            Quantity = quantity;
+
         }
 
-        public Item(ItemType type)
+        public Item(int quantity, int maxStackableSize)
         {
-            Type = type;
-            Quantity++;
-        }
-
-        public Item(ItemType type, int quantity, int maxStackableSize)
-        {
-            Type = type;
-            if (quantity <= maxStackableSize)
+            switch (maxStackableSize)
             {
-                Quantity = quantity;
-                MaxStackableSize = maxStackableSize;
-            }
-            else
-            {
-                throw new ArgumentException();
+                case (int)StackSize.FullStack:
+                    if (quantity <= (int)StackSize.FullStack && quantity > 0)
+                    {
+                        Quantity = quantity;
+                        MaxStackableSize = maxStackableSize;
+                    }
+                    break;
+                case (int)StackSize.ShortStack:
+                    if (quantity <= (int)StackSize.FullStack && quantity > 0)
+                    {
+                        Quantity = quantity;
+                        MaxStackableSize = maxStackableSize;
+                    }
+                    break;
             }
         }
 
         public Item(Item item)
         {
-            Type = item.Type;
-            Quantity = item.Quantity;
+            Id = item.Id;
             MaxStackableSize = item.MaxStackableSize;
+            Quantity = item.Quantity;
+            DisplayName = item.DisplayName;
         }
 
         public void Increment()
@@ -81,7 +84,7 @@ namespace GameInventory.GameItem
 
         public override string ToString()
         {
-            return Type + ":" + Quantity;
+            return GetType().Name + ":" + Quantity;
         }
     }
 }

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for my JSON file format",
+
+  "type": "object",
+
+  "properties": {
+    "Id": {
+      "type": "integer",
+      "description": "ID of the item. For simplicity, it will be an integer starting from 0 corresponding to an Enum."
+    },
+    "MaxStackableSize": {
+      "type": "integer",
+      "description": "Max capacity of item in inventory slot.",
+      "minimum": 1,
+      "maximum": 64
+    },
+    "Quantity": {
+      "type": "integer",
+      "description": "Current quantity of item in inventory slot."
+    },
+    "DisplayName": {
+      "type": "string",
+      "description": "Display name of the item."
+    }
+  },
+  "required": [ "Id", "MaxStackableSize", "Quantity", "DisplayName"]
+}

@@ -6,13 +6,11 @@ namespace GameInventory.GameItem.Items
 {
     class Sword : Item
     {
-        //public new ItemType Type { get; set; } = ItemType.Sword;
-        //public new int MaxStackableSize { get; set; } = (int)StackSize.Unstackable;
-
-        public Sword() 
+        public Sword()
         {
-            Type = ItemType.Sword;
+            Id = ItemId.Sword;
             MaxStackableSize = (int)StackSize.Unstackable;
+            DisplayName = "Sword";
         }
     }
 }
